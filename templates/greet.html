@@ -1,0 +1,21 @@
+{% extends "layouts/project.html" %}
+{% set project = "greet" %}
+
+{% block body %}
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <p>Hello, {{name}}! This is our team's video!</p>
+    </div>
+    <div class="col-12">
+        <form action="/greet" id="greet" method="POST" >
+            <label for="name">Who is watching the video?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+    <div class="col-12">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xP6kSe0Aay4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endblock %}
+    </div>
+</div>
+
